@@ -17,7 +17,7 @@ def home():
             </head>
             <body>
                 <h1>Welcome {name}! </h1>
-                <a href="https://www.google.com/">not google</a>
+                <a href="www.google.com">not google</a>
                 <ul>    
                     {city_list}
                 </ul>
