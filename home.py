@@ -2,10 +2,11 @@ from flask import Flask
 
 myobj = Flask(__name__)
 
+name = 'Lisa'
+city_names = ['Paris', 'London', 'Rome', 'Tahiti']
+
 @myobj.route("/")
 def home():
-    name = 'Lisa'
-    city_names = ['Paris', 'London', 'Rome', 'Tahiti']
     city_list = ''
     for city in city_names:
         city_list += f'<li>{city}</li>'

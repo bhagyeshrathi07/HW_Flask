@@ -1,3 +1,3 @@
-from app import myapp
+from app import myobj
 
-myapp.run()
+myobj.run()
