@@ -3,26 +3,31 @@
         <title>{{title}}</title>
     </head>
     <body>
+        {%with messages = get_flashed_messages()%}   
+        {%if messages%}
         <ul>
-            {%if request.method == "POST"%}
-                <li>{{newCity}}</li>
-            {%endif%}
+            {%for message in messages%}
+                <li>{{message}}</li>
+            {%endfor%}
         </ul>
+        {%endif%}
+        {%endwith%}
         <h1>Welcome {{name}}!</h1>
         <a href="www.google.com">not google</a>
         <ul>
             {% for city in city_names %}
                 <li>
-                    {{city}}
+                    {{city}}<br>
                 </li>
             {% endfor %}
-        </ul>    
-            <br>
-            <form action="" method="POST">
-                <label for="fname">City Name</label>
-                <br>
-                <input type="char" id="fname" name="fname" maxlength="32"><br><br>
-                <input type="submit" value="Submit">
-            </form>
+        </ul>
+        <form action="" method="POST" novalidate>
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.city.label }}<br>
+                {{ form.city(size=32) }}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
     </body>
 </html>
