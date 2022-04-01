@@ -14,9 +14,9 @@ class newForm(FlaskForm):
 
 @myobj.route("/", methods = ["GET", "POST"])
 def home():
-    form = newForm()
-    if form.validate_on_submit ():
-        flash(format(form.cityName.data))
+    cform = newForm()
+    if cform.validate_on_submit ():
+        flash(format(cform.cityName.data))
         return redirect('/')
-    return render_template('home.html', title = 'Home', name = name, city_names = city_names, form=form) 
+    return render_template('home.html', title = 'Home', name = name, city_names = city_names, cform=cform) 
 

@@ -20,12 +20,12 @@
         {%endfor%}
     </ul>
     <form action="" method="POST" >
-        {{ form.hidden_tag() }}
+        {{ cform.hidden_tag() }}
         <p>
-            {{ form.cityName.label }}<br>
-            {{ form.cityName(size=32) }}
+            {{ cform.cityName.label }}<br>
+            {{ cform.cityName(size=32) }}
         </p>
-        <p>{{ form.submit() }}</p>
+        <p>{{ cform.submit() }}</p>
     </form>
     
 </body>
