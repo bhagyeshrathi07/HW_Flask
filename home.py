@@ -12,14 +12,11 @@ def home():
         city_list += f'<li>{city}</li>'
     return f'''
         <html>
-            <head>
-                <title>HomePage</title>
-            </head>
             <body>
-                <h1>Welcome {name}! </h1>
-                <a href="www.google.com">not google</a>
+                <h1>Welcome {name}! </h1><br>
+                <a href="www.google.com">not google</a><br>
                 <ul>    
-                    {city_list}
+                    {city_list}<br>
                 </ul>
             </body>
         </html>
