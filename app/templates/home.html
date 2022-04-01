@@ -15,15 +15,15 @@
     <a href="www.google.com">not google</a>
 
     <ul>
-        {%for i in city_names %}
-        <li>{{i}}</li>
+        {%for city in city_names %}
+        <li>{{city}}</li>
         {%endfor%}
     </ul>
     <form action="" method="POST" >
         {{ form.hidden_tag() }}
         <p>
-            {{ form.city.label }}<br>
-            {{ form.city(size=32) }}
+            {{ form.cityName.label }}<br>
+            {{ form.cityName(size=32) }}
         </p>
         <p>{{ form.submit() }}</p>
     </form>
